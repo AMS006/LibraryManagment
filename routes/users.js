@@ -2,8 +2,7 @@
 
 const express = require("express")
 
-// Importing Users Data
-const { users } = require("../Data/user.json");
+
 
 const router = express.Router();
 
@@ -15,6 +14,7 @@ const {
     deleteUser,
     subscriptionDetails
 } = require('../controllers/user-controller');
+
 // For Getting all Users
 router.get("/",getAllUsers)
 
@@ -29,7 +29,8 @@ router.put("/:id",updateUser)
 
 //For Deleting User with specific Id
 router.delete("/:id",deleteUser);
-// Checking for the Fine and subscription Expiration
 
+// Checking for the Fine and subscription Expiration
 router.get("/subscription-detail/:id", subscriptionDetails);
+
 module.exports = router;

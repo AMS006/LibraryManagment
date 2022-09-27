@@ -2,7 +2,7 @@ const {userModal} = require('../Models/index');
 
 exports.getAllUsers = async (req,res) =>{
     const users = await userModal.find();
-
+    console.log(req.query.name);
     if(!users)
       return res.status(404).send("No user found");
     
@@ -58,17 +58,17 @@ exports.updateUser = async (req,res) =>{
 exports.deleteUser = async (req,res) =>{
     const {id} = req.params;
 
-    const delUser = await userModal.deleteOne({_id:id})
-
+    
+    const delUser = await userModal.deleteOne({_id:id});
     if(!delUser)
-        return res.status(404).send("User to be deleted not found");
+    return res.status(404).send("User to be deleted not found");
     
     return res.status(200).send("User Deleted");
 }
 exports.subscriptionDetails = async (req,res) =>{
     const { id } = req.params;
 
-    // const user = users.find((each) => each.id === id);
+
     const user = await userModal.findById(id);
 
     if(!user) 

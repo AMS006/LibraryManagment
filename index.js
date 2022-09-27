@@ -1,6 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const port = 8081
+const port = 8081;
 
 const Dbconnection = require('./dbConnection')
 const app = express();
@@ -17,7 +17,6 @@ const booksRoute = require("./routes/books");
 
 app.get("/", (req, res) => {
     res.status(200).send("Server is  Running");
-
 });
 
 app.use('/users' , userRoute);
