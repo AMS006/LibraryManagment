@@ -2,43 +2,44 @@ A Library-Record Managment API with Backend for managining users and books in Li
 
 ## Routes
 
-# /Users
+# /users 
 
- GET : Get all list of user
- Post : Create a new user
+ 1. GET : Get all list of user
+ 2. Post : Create a new user
 
 # users/{id}
 
- GET : Get a user by Id
- PUT : Updata a user by id
- DELETE : Delete a user by id (if user have a issued book and check for fines)
+ 1. GET : Get a user by Id
+ 2. PUT : Updata a user by id
+ 3. DELETE : Delete a user by id (if user have a issued book and check for fines)
 
 # users/subcription/{id}
 
- GET : Get a user subscription (Data of subscription , Valid till , Fine if any)
+1. GET : Get a user subscription (Data of subscription , Valid till , Fine if any)
+
+# Books Routes
 
 # /Books
 
- GET : Get all books
- POST : Create/Add new book
+1. GET : Get all books
+2. POST : Create/Add new book
 
 # Books/{id}
 
- GET : Get a book by id
- PUT : Update a book by id
+1. GET : Get a book by id
+2. PUT : Update a book by id
 
 # books/issued
 
- 
- GET : Get all issued books
+1. GET : Get all issued books
 
 # books/issude/fine
 
-GET : Get all issued books with fine
+1. GET : Get all issued books with fine
 
 # Subscription Types
 
- Basic(3 months)
- Standard(6 months)
- Premius (12 months)
+1. Basic(3 months)
+2. Standard(6 months)
+3. Premius (12 months)
 
